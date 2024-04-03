@@ -28,8 +28,8 @@ label {
 }
 
 ul {
-  margin-right: 10%;
-  margin-left: 20%;
+  margin-right: 30%;
+  margin-left: 30%;
   list-style-type: none;
 }
 
@@ -44,4 +44,37 @@ ul {
   color: #FFFFFF;
   border: 1px solid white;
   padding: 5px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid;
+  width: 150px;
+  height: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow:#303030 2px 3px 5px;
+  margin: 20px;
+}
+
+.card--light {
+  border-color: black;
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.card--dark {
+  border-color: #FFFFFF;
+  background-color: #303030;
+  color: white;
+}
+
+.card--red {
+  border-color: black;
+  background-color: red;
+  color: white;
 }

@@ -6,7 +6,7 @@ interface DarkModeContextProviderProps {
 }
 
 function DarkModeContextProvider(props: DarkModeContextProviderProps) {
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(true);
     const darkModeContextValue = { darkMode, setDarkMode};
 
     return <DarkModeContext.Provider value={darkModeContextValue}>
