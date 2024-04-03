@@ -10,7 +10,7 @@ function SplitPanel(props: SplitPanelProps) {
         <div className="splitpanel">
             {props.leftChildren}
         </div>
-        <div className="splitpanel">
+        <div>
             {props.rightChildren}
         </div>
     </div>

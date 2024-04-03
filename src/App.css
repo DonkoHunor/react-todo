@@ -1,7 +1,3 @@
-body {
-  background-color: #606060;
-}
-
 .Checkbox {
   width: 30px;
   height: 30px;
@@ -84,5 +80,5 @@ ul {
 }
 
 .splitpanel {
-  border: 1px solid white;
+  border-right: 4px dotted white;
 }

@@ -6,6 +6,7 @@ import ToolBar from "./Components/ToolBar";
 import DarkModeContextProvider from "./Components/DarkModeContextProvider";
 import Card from "./Components/Card";
 import SplitPanel from "./Components/SplitPanel";
+import ThemeBackground from "./Components/ThemeBackground";
 
 const initialTodoList: Todo[] = [
     {id: '1', text: 'Teszt szöveg 1'},
@@ -19,6 +20,7 @@ function App() {
     return (
         <div>
             <DarkModeContextProvider>
+                <ThemeBackground/>
                 <ToolBar/>
                 <TodoList list={initialTodoList}/>
                 <SplitPanel
