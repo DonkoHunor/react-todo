@@ -47,7 +47,6 @@ ul {
 }
 
 .card-container {
-  display: flex;
   justify-content: center;
 }
 
@@ -77,4 +76,13 @@ ul {
   border-color: black;
   background-color: red;
   color: white;
+}
+
+.splitpanel--container {
+  display: flex;
+  justify-content: center;
+}
+
+.splitpanel {
+  border: 1px solid white;
 }

@@ -6,6 +6,7 @@ import ToolBar from "./Components/ToolBar";
 import DarkModeContextProvider from "./Components/DarkModeContextProvider";
 import Card from "./Components/Card";
 import DarkModeContext from "./Contexts/DarkModeContext";
+import SplitPanel from "./Components/SplitPanel";
 
 const initialTodoList: Todo[] = [
     {id: '1', text: 'Teszt szöveg 1'},
@@ -21,17 +22,29 @@ function App() {
             <DarkModeContextProvider>
                 <ToolBar/>
                 <TodoList list={initialTodoList}/>
-                <div className="card-container">
-                    <Card onClick={() => {alert('Szia!')}}>
-                        Szia
-                    </Card>
-                    <Card className="card--red" onMouseEnter={() => {alert('Hi!')}}>
-                        Hi
-                    </Card>
-                    <Card>
-                        Vamos!
-                    </Card>
-                </div>
+                <SplitPanel
+                    leftChildren={<div className="card-container">
+                        <Card onClick={() => {alert('Szia!')}}>
+                            Szia
+                        </Card>
+                        <Card className="card--red" onMouseEnter={() => {alert('Hi!')}}>
+                            Hi
+                        </Card>
+                        <Card>
+                            Vamos!
+                        </Card>
+                    </div>}
+                    rightChildren={<div className="card-container">
+                        <Card onClick={() => {alert('Szia!')}}>
+                            Szia
+                        </Card>
+                        <Card className="card--red" onMouseEnter={() => {alert('Hi!')}}>
+                            Hi
+                        </Card>
+                        <Card>
+                            Vamos!
+                        </Card>
+                    </div>}/>
             </DarkModeContextProvider>
         </div>
     );
