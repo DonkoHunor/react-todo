@@ -43,13 +43,13 @@ ul {
 }
 
 .card-container {
+  display: flex;
   justify-content: center;
 }
 
 .card {
+  width: fit-content;
   border: 1px solid;
-  width: 150px;
-  height: 100px;
   padding: 20px;
   border-radius: 10px;
   box-shadow:#303030 2px 3px 5px;
