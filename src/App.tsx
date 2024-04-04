@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {Todo} from "./Todo";
 import TodoList from "./Components/TodoList";
@@ -16,13 +16,20 @@ const initialTodoList: Todo[] = [
     {id: '4', text: 'Teszt szöveg 4'},
 ]
 
+
 function App() {
+
+    const [theme, setTheme] = useState(false);
+
+    function toggleTheme() {
+        setTheme(!theme);
+    }
 
     return (
         <div>
             <DarkModeContextProvider>
-                <ThemeBackground/>
-                <ToolBar/>
+                {theme && <ThemeBackground/>}
+                <ToolBar toggleState={theme} toggle={toggleTheme}/>
                 <Products/>
             </DarkModeContextProvider>
         </div>

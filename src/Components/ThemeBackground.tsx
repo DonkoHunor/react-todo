@@ -6,6 +6,10 @@ function ThemeBackground() {
 
     useEffect(() => {
         document.body.style.background = darkMode ? '#606060' : '#c5c5c5';
+
+        return () => {
+            document.body.style.background = '';
+        }
     }, [darkMode]);
 
     return null
