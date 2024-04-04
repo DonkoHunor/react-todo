@@ -19,7 +19,7 @@ const initialTodoList: Todo[] = [
 
 function App() {
 
-    const [theme, setTheme] = useState(false);
+    const [theme, setTheme] = useState(true);
 
     function toggleTheme() {
         setTheme(!theme);
