@@ -29,7 +29,7 @@ function ToolBar(props: ToolBarProps) {
     return (
         <div className="ToolBar">
             <input type="text" ref={inputRef}/>
-            <label>Background Theme: </label>
+            <label style={{marginLeft: '20px'}}>Background Theme: </label>
             <input className="Checkbox" type="checkbox" onChange={props.toggle} checked={props.toggleState}/>
             <label>DarkMode: </label>
             <input className="Checkbox" type="checkbox" onChange={() => setDarkMode(!darkMode)} checked={darkMode}/>

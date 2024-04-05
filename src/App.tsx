@@ -8,6 +8,8 @@ import Card from "./Components/Card";
 import SplitPanel from "./Components/SplitPanel";
 import ThemeBackground from "./Components/ThemeBackground";
 import Products from "./Components/Products";
+import CanvasDemo from "./Components/CanvasDemo";
+import Input from "./Components/Input";
 
 const initialTodoList: Todo[] = [
     {id: '1', text: 'Teszt szöveg 1'},
@@ -20,6 +22,7 @@ const initialTodoList: Todo[] = [
 function App() {
 
     const [theme, setTheme] = useState(true);
+    const [value, setValue] = useState('alma');
 
     function toggleTheme() {
         setTheme(!theme);
@@ -30,7 +33,10 @@ function App() {
             <DarkModeContextProvider>
                 {theme && <ThemeBackground/>}
                 <ToolBar toggleState={theme} toggle={toggleTheme}/>
-                <Products/>
+                <div style={{textAlign: 'center', width: '100vw'}}>
+                    <Input value={value} setValue={setValue}/>
+                    <p style={{fontSize: 40}}>{value.length}</p>
+                </div>
             </DarkModeContextProvider>
         </div>
     );
